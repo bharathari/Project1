@@ -36,7 +36,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor: '#f0f0f0', color:"black",boxShadow:'none',}}>
+    <AppBar position="static" sx={{backgroundColor: '#2e7d32', color:"black",boxShadow:'none',}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -54,7 +54,7 @@ function ResponsiveAppBar() {
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
-                color: 'inherit',
+                color: 'white',
                 textDecoration: 'none',
 
               }}
@@ -68,7 +68,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ mx: 2,}}
+                sx={{ mx: 2,color:'white'}}
               >
                 {page}
               </Button>
@@ -106,7 +106,7 @@ function ResponsiveAppBar() {
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
           </Box>
-          <NotificationsActiveIcon color='primary' />
+          <NotificationsActiveIcon sx={{color:'white'}}/>
         </Toolbar>
 
       </Container>

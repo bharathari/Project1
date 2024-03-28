@@ -10,11 +10,9 @@ export default function SwitchLabels(props:Props) {
   return (
     <FormGroup>
       {
-        switchlabel.map(lab=><FormControlLabel control={<Switch  color='success' size='small'/>} label={lab} sx={{paddingLeft:'1em'}}/>)
-              
+        switchlabel.map(lab=><FormControlLabel control={<Switch  color='success' size='small'/>} label={lab} sx={{paddingLeft:'1em'}}/>) 
       }
 
     </FormGroup>
-    
   );
 }

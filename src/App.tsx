@@ -1,25 +1,37 @@
 import './App.css';
 import ResponsiveAppBar from './components/Navbar';
-import AccordionExpandDefault from './components/accordon';
-import TemporaryDrawer from './components/collaps-sidebar';
+import PersistentDrawerLeft from './components/Persistent-drawer';
+import Header from './header';
 import LabTabs from './components/tabs';
+import { BrowserRouter } from 'react-router-dom';
+import { Stack } from '@mui/material';
 function App() {
   return (
+    <>
+    <Stack>
     <div style={{fontFamily:'sans-serif'}}>
-    <header style={{position:'sticky'}}>
-    <ResponsiveAppBar/>
-    </header>
-    <div>{/*body*/}
-    <TemporaryDrawer/>
-      <div style={{marginTop:'2em',marginLeft:'20em',width:'55em'}}>
+      <BrowserRouter>
+      <Header/>
+      </BrowserRouter>
+      </div>
+      </Stack>
+      <Stack>
+      <div>
+    <div >{/*body*/}
+    <div style={{display:'inline-block'}}>
+    <PersistentDrawerLeft/>
+    </div>
+
+      <div style={{marginLeft:'20em',width:'50em'}}>
       <h1 style={{color:'#2e7d32'}}>Organization</h1>
       <br/>
     <LabTabs/>
+
     </div>
     </div>
-
-    </div>    
-
+    </div>  
+    </Stack>
+    </> 
   );
 }
 

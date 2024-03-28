@@ -24,10 +24,10 @@ export default function AccordionExpandDefault(props:Props) {
         >
           <Typography>{props.name}</Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography >
+        <AccordionDetails sx={{padding:'1px 13px 1px'}}>
+          
             <SwitchLabels labels={label}/>
-          </Typography>
+         
         </AccordionDetails>
       </Accordion>
     </div>
